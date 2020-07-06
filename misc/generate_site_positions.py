@@ -3,6 +3,9 @@
 # Generate site positions in genome from given restriction enzyme
 # Juicer 1.5
 
+# TODO: replace the process_args and argv stuff with argparse
+# TODO: write documentation
+
 from __future__ import print_function
 
 import sys
@@ -16,7 +19,7 @@ def usage():
 # ------------------------------------------------------------------------------
 
 def process_args(args):
-
+  
   # Genome to filename mappings
   #
   # You may hardcode filenames belonging to frequently used genomes by inserting

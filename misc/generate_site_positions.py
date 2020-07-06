@@ -10,6 +10,7 @@ import re
 
 def usage():
   print('Usage: {} <restriction enzyme> <genome> [location]'.format(sys.argv[0]), file=sys.stderr)
+  print('Example: $python generate_site_positions.py MboI mm9 /path/to/the/genome/file')
   sys.exit(1)
 
 # ------------------------------------------------------------------------------

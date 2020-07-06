@@ -12,6 +12,7 @@ import sys
 import re
 
 def usage():
+  # TODO: replace with argparse
   print('Usage: {} <restriction enzyme> <genome> [location]'.format(sys.argv[0]), file=sys.stderr)
   print('Example: $python generate_site_positions.py MboI mm9 /path/to/the/genome/file')
   sys.exit(1)
@@ -19,7 +20,7 @@ def usage():
 # ------------------------------------------------------------------------------
 
 def process_args(args):
-  
+  # TODO: replace with argparse
   # Genome to filename mappings
   #
   # You may hardcode filenames belonging to frequently used genomes by inserting
@@ -119,7 +120,17 @@ def has_wildcard(pattern):
 # ------------------------------------------------------------------------------
 
 def pattern2regexp(pattern):
-
+  """Converts pattern string(s) into a re.Pattern object.
+  
+  Args:
+    pattern:  String (or list of strings) representing a pattern that needs to be 
+              compiled into a re.Pattern. Will be converted to uppercase before
+              compilation.
+  
+  Returns:
+    re.Pattern (or list of re.Pattern) object(s) for each argument string.
+              
+  """
   # Input pattern can be a list or a string.
 
   wildcards = {

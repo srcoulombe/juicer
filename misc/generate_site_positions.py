@@ -102,7 +102,16 @@ def process_args(args):
 # ------------------------------------------------------------------------------
 
 def has_wildcard(pattern):
-
+  """Parses the argument string(s) and reports the presence/absence of wildcard characters
+  
+  Args:
+    pattern:  String (or list of strings) to be parsed.
+  
+  Returns:
+    True if at least 1 wildcard character was found in any of the argument string(s).
+    False otherwise.
+    
+  """
   # Input pattern can be a list or a string.
 
   wildcards = re.compile(r'[NMRWYSKHBVD]')
